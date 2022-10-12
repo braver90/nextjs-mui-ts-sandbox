@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { ReactNode } from 'react';
 import styles from './app_layout.module.css';
 import backgroudPic from '../public/background.png';
-
+import BgImage from '../components/bgImage/bgImage';
 const AppLayout = (props: { children: ReactNode }) => {
   const { children } = props;
   return (
@@ -18,17 +18,18 @@ const AppLayout = (props: { children: ReactNode }) => {
         role={'main'}
         maxWidth={false}
         className={styles.mainContainer}
-        sx={{
-          backgroundColor: 'primary.main',
-          backgroundImage: `url(${backgroudPic.src})`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundBlendMode: 'multiply',
-        }}
+        // sx={{
+        //   backgroundColor: 'primary.main',
+        //   backgroundImage: `url(${backgroudPic.src})`,
+        //   backgroundSize: 'cover',
+        //   backgroundRepeat: 'no-repeat',
+        //   backgroundBlendMode: 'multiply',
+        // }}
       >
-        <Card elevation={24} className={styles.appContainer}>
-          {children}
-        </Card>
+        <BgImage />
+        {/* <Card elevation={24} className={styles.appContainer}> */}
+        {/* {children} */}
+        {/* </Card> */}
       </Container>
     </>
   );

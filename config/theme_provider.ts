@@ -5,12 +5,13 @@ import {
 } from '@importantimport/material-color-utilities';
 import { responsiveFontSizes, createTheme } from '@mui/material';
 
-const dynamicTheme = themeFromSourceColor(argbFromHex('#71A289'));
+const dynamicTheme = themeFromSourceColor(argbFromHex('#c242f5'));
 
 const generateTheme = (isDarkMode: boolean) => {
   const currentScheme = isDarkMode
     ? dynamicTheme.schemes.dark
     : dynamicTheme.schemes.light;
+
   return createTheme({
     palette: {
       mode: isDarkMode ? 'dark' : 'light',
@@ -28,4 +29,7 @@ const generateTheme = (isDarkMode: boolean) => {
   });
 };
 
-export default responsiveFontSizes(generateTheme(true));
+const getTheme = (prefersDarkMode: boolean) => {
+  return responsiveFontSizes(generateTheme(true));
+};
+export default getTheme;
