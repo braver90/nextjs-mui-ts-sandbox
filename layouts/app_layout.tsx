@@ -2,7 +2,7 @@ import { Card } from '@mui/material';
 import { Container } from '@mui/system';
 import Head from 'next/head';
 import { ReactNode } from 'react';
-import styles from './app.module.css';
+import styles from './app_layout.module.css';
 import backgroudPic from '../public/background.png';
 
 const AppLayout = (props: { children: ReactNode }) => {
