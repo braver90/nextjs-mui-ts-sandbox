@@ -1,5 +1,9 @@
 .imgCtn > span {
   background-color: inherit !important;
+  z-index: inherit;
+}
+.imgCtn {
+  z-index: -1;
 }
 .bgImage {
   height: 500px;

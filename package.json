@@ -17,7 +17,10 @@
     "@importantimport/material-color-utilities": "^0.2.0",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "i": "^0.3.7",
     "next": "latest",
+    "next-themes": "^0.2.1",
+    "npm": "^8.19.2",
     "react": "latest",
     "react-dom": "latest"
   },

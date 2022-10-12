@@ -1,11 +1,13 @@
-import * as React from 'react';
-import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Link from '../src/Link';
-import ProTip from '../src/ProTip';
-import Copyright from '../src/Copyright';
+import Card from '@mui/material/Card';
 
-export default function Home() {
-  return <Typography variant="h1">En</Typography>;
-}
+const Home = () => {
+  console.log('COSE');
+  return (
+    <Card>
+      <Typography variant="h1">En-test-app1</Typography>;
+    </Card>
+  );
+};
+
+export default Home;

@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 import styles from './app_layout.module.css';
 import backgroudPic from '../public/background.png';
 import BgImage from '../components/bgImage/bgImage';
+import Header from '../components/header/header';
 const AppLayout = (props: { children: ReactNode }) => {
   const { children } = props;
   return (
@@ -14,23 +15,22 @@ const AppLayout = (props: { children: ReactNode }) => {
         <meta name="description" content="A template to evaluate mortgage" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Header></Header>
       <Container
         role={'main'}
         maxWidth={false}
         className={styles.mainContainer}
-        // sx={{
-        //   backgroundColor: 'primary.main',
-        //   backgroundImage: `url(${backgroudPic.src})`,
-        //   backgroundSize: 'cover',
-        //   backgroundRepeat: 'no-repeat',
-        //   backgroundBlendMode: 'multiply',
-        // }}
       >
-        <BgImage />
-        {/* <Card elevation={24} className={styles.appContainer}> */}
-        {/* {children} */}
-        {/* </Card> */}
+        <Card
+          elevation={24}
+          className={styles.appContainer}
+          sx={{ backgroundColor: 'primary.main' }}
+        >
+          {children}
+        </Card>
       </Container>
+      <BgImage />
     </>
   );
 };
