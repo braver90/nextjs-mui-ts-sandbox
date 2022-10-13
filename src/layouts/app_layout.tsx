@@ -6,8 +6,9 @@ import styles from './app_layout.module.css';
 import backgroudPic from '../public/background.png';
 import BgImage from '../components/bgImage/bgImage';
 import Header from '../components/header/header';
-const AppLayout = (props: { children: ReactNode }) => {
-  const { children } = props;
+
+const AppLayout = (props: { config: any; children: ReactNode }) => {
+  const { children, config } = props;
   return (
     <>
       <Head>
@@ -16,7 +17,7 @@ const AppLayout = (props: { children: ReactNode }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header></Header>
+      <Header {...config.header}></Header>
       <Container
         role={'main'}
         maxWidth={false}

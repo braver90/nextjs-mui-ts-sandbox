@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes';
 import { GlobalStyles } from '@mui/material';
 import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material';
-import { darkTheme, lightTheme } from '../../config/theme';
+import { darkTheme, lightTheme } from '../../../config/theme';
 import { FC, useEffect, useState } from 'react';
 
 const ThemeProvider: FC<{ children: React.ReactNode }> = ({ children }) => {

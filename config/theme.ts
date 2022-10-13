@@ -5,7 +5,8 @@ import {
 } from '@importantimport/material-color-utilities';
 import { responsiveFontSizes, createTheme } from '@mui/material';
 
-const dynamicTheme = themeFromSourceColor(argbFromHex('#c242f5'));
+const seed = '#FF5A0F';
+const dynamicTheme = themeFromSourceColor(argbFromHex(seed));
 
 const { dark, light } = dynamicTheme.schemes;
 
@@ -40,6 +41,6 @@ const baseDarkTheme = createTheme({
     },
   },
 });
-
+export const primary = seed;
 export const lightTheme = responsiveFontSizes(baseLightTheme);
 export const darkTheme = responsiveFontSizes(baseDarkTheme);
